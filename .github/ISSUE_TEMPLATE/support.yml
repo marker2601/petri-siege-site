@@ -1,0 +1,50 @@
+name: Support request
+description: Get help with Petri Siege for iPhone.
+title: "[Support] "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requests are public. Do not include personal details such as your name, email address, phone number or Apple Account.
+        We answer support requests within 5 working days.
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: "iPhone 16"
+    validations:
+      required: true
+  - type: input
+    id: ios
+    attributes:
+      label: iOS version
+      placeholder: "iOS 27.0"
+    validations:
+      required: true
+  - type: input
+    id: game-version
+    attributes:
+      label: Game version
+      description: "Shown in Settings > System > Privacy and support."
+      placeholder: "1.0.0 (build 10)"
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: purchase
+    attributes:
+      label: Purchase involved
+      options:
+        - "No"
+        - "Lab License"
+        - "ATP pack"
+      default: 0
+    validations:
+      required: false
